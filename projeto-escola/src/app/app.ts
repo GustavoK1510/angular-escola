@@ -7,5 +7,37 @@ import { Component, signal } from '@angular/core';
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('projeto-escola');
+  title = 'Sistema Alunos proway';
+
+  escola = {
+    nome: 'Proway',
+    cidade: 'Blumenau'
+  }
+
+  listaAlunos = [
+    {
+      nome: 'Harry',
+      matricula: 1111,
+      curso: 'Frontend',
+      email: 'harry@gmail.com',
+      materias: ['HTML', 'CSS', 'Typescript'],
+      imagem: 'assets/usuario.png'
+    },
+    {
+      nome: 'Hermione',
+      matricula: 2222,
+      curso: 'Backend',
+      email: 'hermione@gmail.com',
+      materias: ['Java', 'PostgreSQL'],
+      imagem: 'assets/usuario2.png'
+    },
+    {
+      nome: 'Ronald',
+      matricula: 3333,
+      curso: 'Banco de Dados',
+      email: 'ronald@gmail.com',
+      materias: ['MySql', 'Oracle'],
+      imagem: 'assets/usuario3.png'
+    }
+  ]
 }

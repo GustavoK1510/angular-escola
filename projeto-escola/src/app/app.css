@@ -9,6 +9,15 @@ h1 {
     color: azure;
 }
 
+#content main{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 10px;
+    padding: 8px;
+    gap: 8px;
+}
+
 #footer {
     height: 40px;
     position: absolute;
