@@ -1,0 +1,26 @@
+#header {
+    height: 80px;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h1 {
+    color: azure;
+}
+
+#footer {
+    height: 40px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer p {
+    color: azure;
+}
