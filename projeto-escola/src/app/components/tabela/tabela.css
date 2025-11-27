@@ -1,0 +1,44 @@
+.tabela-container {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.tabela-alunos {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+}
+
+.tabela-alunos thead {
+  background-color: #f28522;
+  color: white;
+}
+
+.tabela-alunos th,
+.tabela-alunos td {
+  padding: 10px 14px;
+  text-align: left;
+}
+
+.tabela-alunos tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.linha-aprovado {
+  background-color: #0b3d6e;
+  color: white;
+}
+
+.linha-reprovado {
+  background-color: white;
+}
+
+.status.aprovado {
+  font-weight: bold;
+  color: #00b300;
+}
+
+.status.reprovado {
+  font-weight: bold;
+  color: #cc0000;
+}

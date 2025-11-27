@@ -21,7 +21,8 @@ export class App {
       curso: 'Frontend',
       email: 'harry@gmail.com',
       materias: ['HTML', 'CSS', 'Typescript'],
-      imagem: 'assets/usuario.png'
+      imagem: 'assets/usuario.png',
+      situacao: true
     },
     {
       nome: 'Hermione',
@@ -29,7 +30,8 @@ export class App {
       curso: 'Backend',
       email: 'hermione@gmail.com',
       materias: ['Java', 'PostgreSQL'],
-      imagem: 'assets/usuario2.png'
+      imagem: 'assets/usuario2.png',
+      situacao: false
     },
     {
       nome: 'Ronald',
@@ -37,7 +39,16 @@ export class App {
       curso: 'Banco de Dados',
       email: 'ronald@gmail.com',
       materias: ['MySql', 'Oracle'],
-      imagem: 'assets/usuario3.png'
+      imagem: 'assets/usuario3.png',
+      situacao: true
+    },
+    {
+      nome: 'Gina',
+      matricula: 4444,
+      curso: 'Angular',
+      email: 'gina@gmail.com',
+      imagem: 'assets/usuario4.png',
+      situacao: false
     }
   ]
 }

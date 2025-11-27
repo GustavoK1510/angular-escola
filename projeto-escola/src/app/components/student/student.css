@@ -1,13 +1,30 @@
-div {
+.card {
     width: 200px;
-    height: 300px;
+    height: 350px;
     padding: 16px;
     border: solid 1px gray
 }
 
-div:hover {
+.card:hover {
     box-shadow: 2px 2px 5px rgb(90, 90, 90);
     cursor: pointer;
+}
+
+.aprovacao {
+    margin: 8px 0;
+    padding: 8px 0;
+    border-radius: 4px;
+    background-color: silver;
+    color: #fff;
+    text-align: center;
+}
+
+.aprovacao.aprovado {
+    background-color: rgb(30, 114, 30);
+}
+
+.aprovacao.reprovado {
+    background-color: rgb(161, 23, 23);
 }
 
 img {
