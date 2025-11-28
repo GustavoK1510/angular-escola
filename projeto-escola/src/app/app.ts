@@ -24,7 +24,7 @@ export class App {
       curso: 'Frontend',
       email: 'harry@gmail.com',
       materias: ['HTML', 'CSS', 'Typescript'],
-      imagem: 'assets/usuario.png',
+      imagem: '../assets/usuario.png',
       situacao: true
     },
     {
@@ -33,7 +33,7 @@ export class App {
       curso: 'Backend',
       email: 'hermione@gmail.com',
       materias: ['Java', 'PostgreSQL'],
-      imagem: 'assets/usuario2.png',
+      imagem: '../assets/usuario2.png',
       situacao: false
     },
     {
@@ -42,7 +42,7 @@ export class App {
       curso: 'Banco de Dados',
       email: 'ronald@gmail.com',
       materias: ['MySql', 'Oracle'],
-      imagem: 'assets/usuario3.png',
+      imagem: '../assets/usuario3.png',
       situacao: true
     },
     {
@@ -51,7 +51,7 @@ export class App {
       curso: 'Angular',
       email: 'gina@gmail.com',
       materias: ['MySql', 'Oracle'],
-      imagem: 'assets/usuario4.png',
+      imagem: '../assets/usuario4.png',
       situacao: false
     }
   ]
