@@ -1,4 +1,5 @@
 import { Component, signal } from '@angular/core';
+import { IAluno } from './interfaces/IAluno';
 
 @Component({
   selector: 'app-root',
@@ -7,14 +8,16 @@ import { Component, signal } from '@angular/core';
   styleUrl: './app.css'
 })
 export class App {
-  title = 'Sistema Alunos proway';
+  titulo: string = 'Sistema Alunos Proway';
+  exibicao: string = 'lista';
+  filtro: string = 'todos';
 
   escola = {
     nome: 'Proway',
     cidade: 'Blumenau'
   }
 
-  listaAlunos = [
+  listaAlunos: IAluno[] = [
     {
       nome: 'Harry',
       matricula: 1111,
@@ -47,8 +50,15 @@ export class App {
       matricula: 4444,
       curso: 'Angular',
       email: 'gina@gmail.com',
+      materias: ['MySql', 'Oracle'],
       imagem: 'assets/usuario4.png',
       situacao: false
     }
   ]
+
+  alternarExibicao(): void {
+    this.exibicao = this.exibicao === 'lista' ? 'cards' : 'lista';
+  }
+
+  
 }

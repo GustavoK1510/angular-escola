@@ -1,35 +1,23 @@
-<div class="tabela-container">
-  <table class="tabela-alunos">
-    <thead>
-      <tr>
-        <th>Matrícula</th>
-
-        <th>Nome</th>
-
-        <th>E-mail</th>
-
-        <th>Curso</th>
-
-        <th>Status</th>
-        
-      </tr>
-    </thead>
-
-    <tbody>
-      <tr *ngFor="let aluno of alunos" [ngClass]="aluno.situacao ? 'linha-aprovado' : 'linha-reprovado'">
-        <td>{{ aluno.matricula }}</td>
-
-        <td>{{ aluno.nome }}</td>
-
-        <td>{{ aluno.email }}</td>
-
-        <td>{{ aluno.curso }}</td>
-
-        <td class="status" [ngClass]="aluno.situacao ? 'aprovado' : 'reprovado'">
-          {{ aluno.situacao ? 'Aprovado' : 'Reprovado' }}
-        </td>
-
-      </tr>
-    </tbody>
-  </table>
+<div>
+    <h2>{{ titulo }}</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Matrícula</th>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Curso</th>
+                <th>Situação</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let aluno of alunos">
+                <td>{{ aluno.matricula }}</td>
+                <td>{{ aluno.nome }}</td>
+                <td>{{ aluno.email }}</td>
+                <td>{{ aluno.curso }}</td>
+                <td>{{ aluno.situacao ? 'Aprovado' : 'Reprovado' }}</td>
+            </tr>
+        </tbody>
+    </table>
 </div>

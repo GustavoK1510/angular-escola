@@ -1,24 +1,50 @@
-<div id="header">
+<div class="container">
   <header>
-    <h1>Sistema Alunos Proway</h1>
+    <h1>{{ titulo }}</h1>
   </header>
-</div>
-
-<div id="cards">
+  
   <main>
-    <app-student [aluno]="listaAlunos[0]" [escola]="escola"></app-student>
-    <app-student [aluno]="listaAlunos[1]" [escola]="escola"></app-student>
-    <app-student [aluno]="listaAlunos[2]" [escola]="escola"></app-student>
-    <app-student [aluno]="listaAlunos[3]" [escola]="escola"></app-student>
+    <section>
+      <div class="botoes">
+        <button (click)="alternarExibicao()">
+          Exibir {{ exibicao == 'cards' ? 'Lista' : 'Cards' }}
+        </button>
+      </div>
+
+      <div class="botoes">
+        <span>Filtros</span>
+        
+        <button>
+          Todos
+        </button>
+
+        <button>
+          Aprovados
+        </button>
+
+        <button>
+          Reprovados
+        </button>
+      </div>
+    </section>
+
+    <section class="cards" *ngIf="exibicao == 'cards'">
+      <app-student
+        [aluno]="alunoAtual"
+        [escola]="escola"
+        *ngFor="let alunoAtual of listaAlunos">
+      </app-student>
+    </section>
+
+    <section class="lista" *ngIf="exibicao == 'lista'">
+      <app-tabela
+        [titulo]="'Lista de alunos'"
+        [alunos]="listaAlunos">
+      </app-tabela>
+    </section>
   </main>
-</div>
 
-<div class="tabela">
-  <app-tabela [alunos]="listaAlunos"></app-tabela>
-</div>
-
-<div id="footer">
   <footer>
-    <p>Site Proway</p>
+    <p>- Site Proway -</p>
   </footer>
 </div>

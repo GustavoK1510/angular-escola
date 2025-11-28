@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { IAluno } from '../../interfaces/IAluno';
 
 @Component({
   selector: 'app-student',
@@ -7,7 +8,7 @@ import { Component, Input } from '@angular/core';
   styleUrl: './student.css',
 })
 export class Student {
-  @Input() aluno!: any
+  @Input() aluno!: IAluno; 
   @Input() escola!: any
 
   textoDestaque: string = '30px'

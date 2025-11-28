@@ -1,11 +1,24 @@
 <div class="card">
-    <img src="{{ aluno.imagem }}" alt="">
-    <h3>{{ aluno.nome }}</h3>
+    <img src="assets/{{aluno.imagem}}" alt="">
+    <h2>{{ aluno.nome }}</h2>
+    <p>
+        <strong>Matrícula:</strong> {{ aluno.matricula }}
+    </p>
+    <p>
+        <strong>Curso:</strong> {{ aluno.curso }}
+    </p>
+    <p>
+        <strong>Matérias: </strong> {{ aluno.materias }}
+    </p>
+    <p>
+        <strong>Email:</strong> {{ aluno.email }}
+    </p>
 
-    <p><strong>Matrícula:</strong> {{ aluno.matricula }}</p>
-    <p><strong>Email:</strong> {{ aluno.email }}</p>
     <div class="aprovacao" [ngClass]="aluno.situacao ? 'aprovado' : 'reprovado'">
-        <p>Aluno {{aluno.situacao ? 'Aprovado' : 'Reprovado'}}</p>
+        <p>Aluno {{ aluno.situacao ? 'Aprovado' : 'Reprovado' }}</p>
     </div>
-    <p class="mt-16" [ngStyle]="{ 'font-size' : 'textoDestaque'}">{{ escola.nome }} - {{ escola.cidade }}</p>
+
+    <p class="mt-16 txt-center" [ngStyle]="{ 'font-size' : textoDestaque }">
+        {{ escola.nome }} - {{ escola.cidade }}
+    </p>
 </div>

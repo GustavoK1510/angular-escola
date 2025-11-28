@@ -1,4 +1,5 @@
 import { Component, Input, input } from '@angular/core';
+import { IAluno } from '../../interfaces/IAluno';
 
 @Component({
   selector: 'app-tabela',
@@ -7,6 +8,8 @@ import { Component, Input, input } from '@angular/core';
   styleUrl: './tabela.css',
 })
 export class Tabela {
-  @Input() alunos: any[] = [];
+  @Input() alunos: IAluno[] = [];
+
+  @Input() titulo: string = '';
 
 }
