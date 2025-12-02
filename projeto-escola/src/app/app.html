@@ -14,15 +14,15 @@
       <div class="botoes">
         <span>Filtros</span>
         
-        <button>
+        <button (click)="filtrarTodos()">
           Todos
         </button>
 
-        <button>
+        <button (click)="filtrarAprovados()">
           Aprovados
         </button>
 
-        <button>
+        <button (click)="filtrarReprovados()">
           Reprovados
         </button>
       </div>
@@ -30,17 +30,23 @@
 
     <section class="cards" *ngIf="exibicao == 'cards'">
       <app-student
+        (excluir)="onExcluir($event)"
         [aluno]="alunoAtual"
         [escola]="escola"
-        *ngFor="let alunoAtual of listaAlunos">
+        *ngFor="let alunoAtual of listaAlunosFiltro">
       </app-student>
     </section>
 
     <section class="lista" *ngIf="exibicao == 'lista'">
       <app-tabela
+        (excluir)="onExcluir($event)"
         [titulo]="'Lista de alunos'"
-        [alunos]="listaAlunos">
+        [alunos]="listaAlunosFiltro">
       </app-tabela>
+    </section>
+
+    <section>
+      <app-forms-aluno></app-forms-aluno>
     </section>
   </main>
 

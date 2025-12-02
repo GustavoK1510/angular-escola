@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { IAluno } from '../../interfaces/IAluno';
 
 @Component({
@@ -8,8 +8,15 @@ import { IAluno } from '../../interfaces/IAluno';
   styleUrl: './student.css',
 })
 export class Student {
-  @Input() aluno!: IAluno; 
+  @Output() excluir: EventEmitter<number> = new EventEmitter();
+
+  @Input() aluno!: IAluno;
+   
   @Input() escola!: any
+
+  public excluirAluno(matricula: number): void {
+    this.excluir.emit(matricula);
+  }
 
   textoDestaque: string = '30px'
 }

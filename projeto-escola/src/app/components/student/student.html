@@ -21,4 +21,6 @@
     <p class="mt-16 txt-center" [ngStyle]="{ 'font-size' : textoDestaque }">
         {{ escola.nome }} - {{ escola.cidade }}
     </p>
+
+    <button (click)="excluirAluno(aluno.matricula)">Excluir</button>
 </div>

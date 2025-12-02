@@ -8,6 +8,7 @@
                 <th>Email</th>
                 <th>Curso</th>
                 <th>Situação</th>
+                <th>Ações</th>
             </tr>
         </thead>
         <tbody>
@@ -17,6 +18,10 @@
                 <td>{{ aluno.email }}</td>
                 <td>{{ aluno.curso }}</td>
                 <td>{{ aluno.situacao ? 'Aprovado' : 'Reprovado' }}</td>
+                <td>
+                    <button class="editar">Editar</button>
+                    <button class="excluir" (click)="excluirAluno(aluno.matricula)">Excluir</button> 
+                </td>
             </tr>
         </tbody>
     </table>

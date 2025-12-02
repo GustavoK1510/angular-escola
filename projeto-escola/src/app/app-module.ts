@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
 import { Student } from './components/student/student';
 import { Tabela } from './components/tabela/tabela';
+import { FormsAluno } from './components/forms-aluno/forms-aluno';
 
 @NgModule({
   declarations: [
     App,
     Student,
-    Tabela
+    Tabela,
+    FormsAluno
   ],
   imports: [
     BrowserModule,

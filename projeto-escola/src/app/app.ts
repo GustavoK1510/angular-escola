@@ -56,8 +56,29 @@ export class App {
     }
   ]
 
+  listaAlunosFiltro: IAluno[] = this.listaAlunos;
+
   alternarExibicao(): void {
     this.exibicao = this.exibicao === 'lista' ? 'cards' : 'lista';
+  }
+
+  filtrarAprovados(): void {
+    const listaAprovados: IAluno[] = this.listaAlunos.filter(aluno => aluno.situacao === true);
+    this.listaAlunosFiltro = listaAprovados;
+  }
+
+  filtrarReprovados(): void {
+    const listaReprovados: IAluno[] = this.listaAlunos.filter(aluno => aluno.situacao === false);
+    this.listaAlunosFiltro = listaReprovados;
+  }
+
+  filtrarTodos(): void {
+    this.listaAlunosFiltro = this.listaAlunos;
+  }
+
+  onExcluir(matricula: number): void {
+    const index: number = this.listaAlunos.findIndex(aluno => aluno.matricula === matricula);
+    this.listaAlunos.splice(index, 1);
   }
 
   
